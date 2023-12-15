@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+//main game loop
 function runGame(userChoice) {
 
     const computerOptions = ["rock", "paper", "scissors", "lizard", "spock"];
@@ -20,6 +21,7 @@ function runGame(userChoice) {
     const pcNumber = Math.floor(Math.random() * 5);
     const pcChoice = computerOptions[pcNumber];
 
+    //check user choice section
     if (userChoice === "scissors") {
         displayResultScissors(userChoice, pcChoice);
     } else if(userChoice === "paper") {
@@ -42,35 +44,57 @@ function runGame(userChoice) {
 function determineWinner() {
     let userpick = parseInt(document.getElementById('userpick').innerText);
     let computerpick = parseInt(document.getElementById('computerpick').innerText);
-    let winner = parseInt(document.getElementById('winner').innerText)
+    //let winner = parseInt(document.getElementById('winner').innerText)
+    if (userChoice === "scissors") {
+        return compareScissors(userpick, computerpick)
+    }
 }
 
+//Display result section
 function displayResultScissors(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
-    document.getElementById('winner').textContent = winner;
+    //document.getElementById('winner').textContent = winner;
 }
 
 function displayResultPaper(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
-    document.getElementById('winner').textContent = winner;
+    //document.getElementById('winner').textContent = winner;
 }
 
 function displayResultRock(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
-    document.getElementById('winner').textContent = winner;
+    //document.getElementById('winner').textContent = winner;
 }
 
 function displayResultLizard(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
-    document.getElementById('winner').textContent = winner;
+    //document.getElementById('winner').textContent = winner;
 }
 
 function displayResultSpock(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
-    document.getElementById('winner').textContent = winner;
+    //document.getElementById('winner').textContent = winner;
+}
+
+function compareScissors(userpick, computerpick) {
+let winner = document.querySelector(".winner");
+if (userpick === computerpick){
+    winner.textContent = "It's a Tie!";
+    return;
+}
+if (userpick === "scissors"){
+    if(computerpick === "lizard"){
+        winner.textContent = "You Win";
+        return;
+    }
+}
+}
+
+function increaseScore() {
+    
 }
