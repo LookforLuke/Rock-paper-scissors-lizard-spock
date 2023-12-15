@@ -17,7 +17,13 @@ function runGame() {
 
 }
 
+/**
+ * Called when generating computer selection
+ */
 function getcomputerselection() {
+    
+    //Creates a random number between 0 and 4
+    let pcChoice = Math.floor(Math.random() * 5);
 
 }
 
