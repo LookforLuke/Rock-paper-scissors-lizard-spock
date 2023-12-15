@@ -39,14 +39,6 @@ function getUserSelection() {
 
 }
 
-function determineWinner() {
-
-}
-
-function increaseScore() {
-
-}
-
 function displayResultScissors(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
@@ -54,17 +46,42 @@ function displayResultScissors(userpick, computerpick) {
 }
 
 function displayResultPaper(userpick, computerpick) {
-
+    document.getElementById('userpick').textContent = userpick;
+    document.getElementById('computerpick').textContent = computerpick;
+    document.getElementById('winner').textContent = winner;
 }
 
 function displayResultRock(userpick, computerpick) {
-
+    document.getElementById('userpick').textContent = userpick;
+    document.getElementById('computerpick').textContent = computerpick;
+    document.getElementById('winner').textContent = winner;
 }
 
 function displayResultLizard(userpick, computerpick) {
-
+    document.getElementById('userpick').textContent = userpick;
+    document.getElementById('computerpick').textContent = computerpick;
+    document.getElementById('winner').textContent = winner;
 }
 
 function displayResultSpock(userpick, computerpick) {
+    document.getElementById('userpick').textContent = userpick;
+    document.getElementById('computerpick').textContent = computerpick;
+    document.getElementById('winner').textContent = winner;
+}
+
+/**
+ * gets choices from DOM, returns correct result.
+ */
+function determineWinner() {
+    let userpick = parseInt(document.getElementById('userpick').innerText;)
+    let computerpick = parseInt(document.getElementById('computerpick').innerText;)
+    let winner = parseInt(document.getElementById('winner').innerText;)
+
+    if (userpick === "Scissors") {
+        return;
+    }
+}
+
+function increaseScore() {
 
 }
