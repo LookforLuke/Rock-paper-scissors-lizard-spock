@@ -21,16 +21,47 @@
     <!--Main game area-->
     <div class="game-area">
         <div class="selection-area">
-
+            <button data-type="scissors" class="btn--big red">
+                <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+            <button data-type="paper" class="btn--big purple">
+                <i class="fa-solid fa-hand"></i>
+            </button>
+            <button data-type="rock" class="btn--big teal">
+                <i class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button data-type="lizard" class="btn--big orange">
+                <i class="fa-solid fa-dragon"></i>
+            </button>
+            <button data-type="spock" class="btn--big blue">
+                <i class="fa-solid fa-hand-spock"></i>
+            </button>
         </div>
     </div>
 
     <!--Results Display-->
-    <div class="outcome"></div>
+    <div class="outcome">
+        <span class="choice">
+            <p>You chose</p>
+        </span>
+        <span id="user-pick">
+            <i class="fa-solid fa-hand"></i>
+        </span>
+        <span class="result">
+            <h3>You win</h3>
+            <button data-type="play-again" class="btn">Play again</button>
+        </span>
+        <span class="choice">
+            <p>We chose</p>
+        </span>
+        <span id="computer-pick">
+            <i class="fa-solid fa-hand-back-fist"></i>
+        </span>
+    </div>
 
     <!--Score-->
     <span class="score-area">
-        
+        <h3 class="scores">Score: <span id="score">5</span></h3>
     </span>
 
     <script src="assets/js/script.js"></script>
