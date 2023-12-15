@@ -7,14 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("You chose play again");
             } else {
                 let userChoice = this.getAttribute("data-type");
-                alert(`You selected ${userChoice}`);
+                runGame(userChoice);
             }
         })
     }
 })
 
-function runGame() {
+function runGame(userChoice) {
 
+    let pcChoice = Math.floor(Math.random() * 5);
+
+    if (userChoice === "scissors") {
+        displayResultScissors(userChoice, pcChoice);
+    } else {
+        alert(`unknown user choice: ${userChoice}`);
+        throw `Unknown user choice: ${userChoice}. Aborting`;
+    }
 }
 
 /**
@@ -39,6 +47,8 @@ function increaseScore() {
 
 }
 
-function displayResult() {
-
+function displayResultScissors(userpick, computerpick) {
+    document.getElementById('userpick').textContent = userpick;
+    document.getElementById('computerpick').textContent = computerpick;
+    document.getElementById('winner').textContent = winner;
 }
