@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame(userChoice) {
 
-    let pcChoice = Math.floor(Math.random() * 5);
+    const computerOptions = ["rock", "paper", "scissors", "lizard", "spock"];
+
+    const pcNumber = Math.floor(Math.random() * 5);
+    const pcChoice = computerOptions[pcNumber];
 
     if (userChoice === "scissors") {
         displayResultScissors(userChoice, pcChoice);
@@ -36,6 +39,23 @@ function getComputerSelection() {
 }
 
 function getUserSelection() {
+
+}
+
+/**
+ * gets choices from DOM, returns correct result.
+ */
+function determineWinner() {
+    let userpick = parseInt(document.getElementById('userpick').innerText;)
+    let computerpick = parseInt(document.getElementById('computerpick').innerText;)
+    let winner = parseInt(document.getElementById('winner').innerText;)
+
+    if (userpick === "Scissors") {
+        return 
+    }
+}
+
+function increaseScore() {
 
 }
 
@@ -67,21 +87,4 @@ function displayResultSpock(userpick, computerpick) {
     document.getElementById('userpick').textContent = userpick;
     document.getElementById('computerpick').textContent = computerpick;
     document.getElementById('winner').textContent = winner;
-}
-
-/**
- * gets choices from DOM, returns correct result.
- */
-function determineWinner() {
-    let userpick = parseInt(document.getElementById('userpick').innerText;)
-    let computerpick = parseInt(document.getElementById('computerpick').innerText;)
-    let winner = parseInt(document.getElementById('winner').innerText;)
-
-    if (userpick === "Scissors") {
-        return;
-    }
-}
-
-function increaseScore() {
-
 }
