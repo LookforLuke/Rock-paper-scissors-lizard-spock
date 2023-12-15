@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.selection-area .btn--big').forEach(btn => {
         btn.addEventListener('click', (ev) => {
             userSelection = getUserSelection(ev.target);
-        console.log(userSelection);
-            
+            console.log(userSelection);    
             startGame();
         } )
     })
@@ -22,7 +21,7 @@ function mod(a, b) {
 function getComputerSelection() {
     
     //Creates a random number between 0 and 4
-    let pcChoice = Math.floor(Math.random() * 5);
+    return actions [Math.floor(Math.random() * 5)];
 
 }
 
