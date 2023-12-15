@@ -82,48 +82,48 @@ h1 {
     margin: 0 25px;
 }
 
-.scissors {
+.red {
     border-color: rgb(170, 3, 3);
 }
 
-.scissors:active,
-.scissors:hover {
+.red:active,
+.red:hover {
     background-color: red;
 }
 
-.paper {
+.purple {
     border-color: rgb(107, 54, 145);
 }
 
-.paper:active,
-.paper:hover {
+.purple:active,
+.purple:hover {
     background-color: blueviolet;
 }
 
-.rock {
+.teal {
     border-color: rgb(90, 190, 190);
 }
 
-.rock:active,
-.rock:hover {
+.teal:active,
+.teal:hover {
     background-color: turquoise;
 }
 
-.lizard {
+.orange {
     border-color: rgb(233, 183, 91);
 }
 
-.lizard:active,
-.lizard:hover {
+.orange:active,
+.orange:hover {
     background-color: orange;
 }
 
-.spock {
+.blue {
     border-color: rgb(74, 94, 207);
 }
 
-.spock:active,
-.spock:hover {
+.blue:active,
+.blue:hover {
     background-color: blue;
 }
 
