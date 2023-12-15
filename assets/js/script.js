@@ -1,16 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "play-again") {
-                alert("You chose play again");
-            } else {
-                let userChoice = this.getAttribute("data-type");
-                alert(`You selected ${userChoice}`);
-            }
-        })
-    }
+    document.querySelectorAll('.selection-area .btn--big').forEach(btn => {
+        btn.addEventListener('click', (ev) => {
+            userSelection = getUserSelection(ev.target);
+        console.log(userSelection);
+            
+            startGame();
+        } )
+    })
 })
 
 //code from https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/
@@ -36,9 +32,9 @@ function getComputerSelection() {
 function getUserSelection(target) {
     console.log(target);
     if (target.nodeName === 'i') {
-        return target.parentElement.classlist[1];
+        return target.parentElement.classList[1];
     }
-    return target.classlist[1];
+    return target.classList[1];
 }
 
 function determineWinner(choice1, choice2) {
