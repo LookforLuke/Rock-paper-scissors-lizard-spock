@@ -13,8 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-function runGame() {
-
+function mod(a, b) {
+    c = a % b
+    return (c < 0) ? c + b : c
 }
 
 /**
@@ -27,6 +28,9 @@ function getComputerSelection() {
 
 }
 
+/**
+ * called when retrieving user selection
+ */
 function getUserSelection() {
 
 }
