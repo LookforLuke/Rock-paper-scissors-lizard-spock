@@ -37,8 +37,17 @@ function getUserSelection() {
 
 }
 
-function determineWinner() {
-
+function determineWinner(choice1, choice2) {
+    x = choices.indexOf(choice1);
+    y - choice1.indexOf(choice2);
+    if (x === y) {
+        return "Tie";
+    }
+    if (mod((x - y), choices.length) < choices.length / 2) {
+        return choice1 + "wins";
+    } else {
+        return choice2 + "wins";
+    }
 }
 
 function increaseScore() {
