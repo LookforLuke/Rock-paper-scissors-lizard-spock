@@ -33,8 +33,12 @@ function getComputerSelection() {
 /**
  * called when retrieving user selection
  */
-function getUserSelection() {
-
+function getUserSelection(target) {
+    console.log(target);
+    if (target.nodeName === 'i') {
+        return target.parentElement.classlist[1];
+    }
+    return target.classlist[1];
 }
 
 function determineWinner(choice1, choice2) {
@@ -54,6 +58,6 @@ function increaseScore() {
 
 }
 
-function displayResult() {
+function displaySelections() {
 
 }
