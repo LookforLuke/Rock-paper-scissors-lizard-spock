@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+//code from https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/
 function mod(a, b) {
     c = a % b
     return (c < 0) ? c + b : c
 }
+//code from https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/
 
 /**
  * Called when generating computer selection
