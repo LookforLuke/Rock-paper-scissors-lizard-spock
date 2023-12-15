@@ -46,9 +46,9 @@ function getUserSelection() {
  * gets choices from DOM, returns correct result.
  */
 function determineWinner() {
-    let userpick = parseInt(document.getElementById('userpick').innerText;)
-    let computerpick = parseInt(document.getElementById('computerpick').innerText;)
-    let winner = parseInt(document.getElementById('winner').innerText;)
+    let userpick = parseInt(document.getElementById('userpick').innerText);
+    let computerpick = parseInt(document.getElementById('computerpick').innerText);
+    let winner = parseInt(document.getElementById('winner').innerText);
 
     if (userpick === "Scissors") {
         return 
