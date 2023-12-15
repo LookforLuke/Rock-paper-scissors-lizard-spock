@@ -52,3 +52,19 @@ function displayResultScissors(userpick, computerpick) {
     document.getElementById('computerpick').textContent = computerpick;
     document.getElementById('winner').textContent = winner;
 }
+
+function displayResultPaper(userpick, computerpick) {
+
+}
+
+function displayResultRock(userpick, computerpick) {
+
+}
+
+function displayResultLizard(userpick, computerpick) {
+
+}
+
+function displayResultSpock(userpick, computerpick) {
+
+}
