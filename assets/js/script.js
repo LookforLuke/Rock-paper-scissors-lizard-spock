@@ -22,24 +22,18 @@ function runGame(userChoice) {
 
     if (userChoice === "scissors") {
         displayResultScissors(userChoice, pcChoice);
+    } else if(userChoice === "paper") {
+        displayResultPaper(userChoice, pcChoice);
+    } else if(userChoice === "rock") {
+        displayResultRock(userChoice, pcChoice);
+    } else if(userChoice === "lizard") {
+        displayResultLizard(userChoice, pcChoice);
+    } else if(userChoice === "spock") {
+        displayResultSpock(userChoice, pcChoice);
     } else {
         alert(`unknown user choice: ${userChoice}`);
         throw `Unknown user choice: ${userChoice}. Aborting`;
     }
-}
-
-/**
- * Called when generating computer selection
- */
-function getComputerSelection() {
-    
-    //Creates a random number between 0 and 4
-    let pcChoice = Math.floor(Math.random() * 5);
-
-}
-
-function getUserSelection() {
-
 }
 
 /**
@@ -48,15 +42,7 @@ function getUserSelection() {
 function determineWinner() {
     let userpick = parseInt(document.getElementById('userpick').innerText);
     let computerpick = parseInt(document.getElementById('computerpick').innerText);
-    let winner = parseInt(document.getElementById('winner').innerText);
-
-    if (userpick === "Scissors") {
-        return 
-    }
-}
-
-function increaseScore() {
-
+    let winner = parseInt(document.getElementById('winner').innerText)
 }
 
 function displayResultScissors(userpick, computerpick) {
